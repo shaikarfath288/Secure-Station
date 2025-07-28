@@ -87,7 +87,7 @@
   </header>
 
   <div class="station-img">
-    <img src="station.png" alt="Gas Station" style="width:100%;" />
+    <img src="station_fixed.png" alt="Gas Station" style="width:100%;" />
     <div class="zone" style="top:20%;left:20%;width:15%;height:15%;" onclick="openModal('pos')"></div>
     <div class="zone" style="top:20%;left:50%;width:15%;height:15%;" onclick="openModal('atg')"></div>
     <div class="zone" style="top:50%;left:30%;width:15%;height:15%;" onclick="openModal('dispenser')"></div>
@@ -119,11 +119,11 @@
       },
       atg: {
         title: 'Automatic Tank Gauge',
-        description: 'ATG exposes telemetry without access control.',
+        description: 'Unsecured firmware updates and lack of validation.',
         fixes: [
-          'Add authentication layer.',
-          'Limit IP access to ATG data endpoint.',
-          'Disable public debug logging.'
+          'Require signed firmware updates.',
+          'Restrict update access by role or IP.',
+          'Log and monitor firmware changes.'
         ]
       },
       dispenser: {
